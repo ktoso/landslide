@@ -83,9 +83,9 @@ class CodeHighlightingMacro(Macro):
                                       nobackground=True)
             pretty_code = pygments.highlight(self.descape(code), lexer,
                                              formatter)
-            content = content.replace(block, pretty_code, 1)
+            content = content.replace(block, block, 1)
 
-        return content, [u'has_code']
+        return content, [u'scala']
 
 
 class EmbedImagesMacro(Macro):
